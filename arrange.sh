@@ -1,11 +1,9 @@
 #!/bin/bash
-
 for file in ./files/*; do
   if [ -f "$file" ]; then
-    filename=$(basename "$file")
-    first_char="${filename:0:1}"
-
-    case "$first_char" in
+    first=$(basename "$file")
+    first="${filename:0:1}"
+    case "$first" in
       A|a) folder="a" ;;
       B|b) folder="b" ;;
       C|c) folder="c" ;;
@@ -37,4 +35,3 @@ for file in ./files/*; do
       mv "$file" "$folder/"
   fi
 done
-

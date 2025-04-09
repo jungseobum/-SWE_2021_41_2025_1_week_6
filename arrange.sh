@@ -2,7 +2,7 @@
 for file in ./files/*; do
   if [ -f "$file" ]; then
     first=$(basename "$file")
-    first="${filename:0:1}"
+    first="${first:0:1}"
     case "$first" in
       A|a) folder="a" ;;
       B|b) folder="b" ;;
